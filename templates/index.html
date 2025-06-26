@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Liver Disease Predictor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Liver Disease Prediction</h2>
+
+        <form id="predict-form">
+
+            <label>Age:
+                <input type="number" name="Age" required>
+            </label>
+
+            <label>Gender:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="Gender" value="0" required> Male</label>
+                <label><input type="radio" name="Gender" value="1"> Female</label>
+            </div>
+            </label>
+
+            <label>BMI:
+                <input type="number" name="BMI" step="0.1" required>
+            </label>
+
+            <label>Alcohol Consumption:
+                <input type="number" name="AlcoholConsumption" step="0.1" required>
+            </label>
+
+            <label>Smoking:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="Smoking" value="1" required> Yes</label>
+                <label><input type="radio" name="Smoking" value="0"> No</label>
+            </div>
+
+            <label>Genetic Risk:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="GeneticRisk" value="0" required> Low</label>
+                <label><input type="radio" name="GeneticRisk" value="1"> Medium</label>
+                <label><input type="radio" name="GeneticRisk" value="2"> High</label>
+            </div>
+
+            <label>Physical Activity (hrs/week):
+                <input type="number" name="PhysicalActivity" step="0.1" required>
+            </label>
+
+            <label>Diabetes:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="Diabetes" value="1" required> Yes</label>
+                <label><input type="radio" name="Diabetes" value="0"> No</label>
+            </div>
+
+            <label>Hypertension:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="Hypertension" value="1" required> Yes</label>
+                <label><input type="radio" name="Hypertension" value="0"> No</label>
+            </div>
+
+            <label>Liver Function Test:
+                <input type="number" name="LiverFunctionTest" step="0.1" required>
+            </label>
+
+            <button type="submit">Predict</button>
+        </form>
+        <div id="result-box" style="display: none;">
+            <h3 id="result"></h3>
+        </div>
+
+
+
+
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
