@@ -19,7 +19,7 @@ ENV/
 # Model files and outputs
 *.pkl
 *.joblib
-*.pdf
+
 
 # OS files
 .DS_Store

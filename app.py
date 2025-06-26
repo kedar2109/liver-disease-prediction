@@ -15,6 +15,7 @@ app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
+# Root endpoint to servr the HTML page
 @app.get("/", response_class=HTMLResponse)
 def home(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
@@ -31,6 +32,7 @@ class PatientData(BaseModel):
     Hypertension: int
     LiverFunctionTest: float
 
+# Endpoint to handle the prediction request
 @app.post("/predict")
 def predict(data: PatientData):
     features = [[
