@@ -40,7 +40,6 @@ The target variable is `Diagnosis`, a binary classification label.
 
 * Confirmed no missing/null values
 * Removed or managed minor outliers
-* Converted categorical inputs where needed
 * All inputs passed through a validation schema (Pydantic)
 
 ---
@@ -48,15 +47,17 @@ The target variable is `Diagnosis`, a binary classification label.
 ## 🤖 Model Implementation
 
 * **Model used**: XGBoost Classifier
-* **Why XGBoost?** Fast, accurate, handles tabular data well
 * **Feature importance** shown using built-in and SHAP methods
 * **Hyperparameter tuning**: Performed using GridSearchCV and RandomizedSearchCV
 * **Evaluation**: 5-fold cross-validation
 
 ### Final Results:
 
-* Accuracy: \~91.8%
-* ROC-AUC: High
+* Accuracy: \~90.8%
+* ROC-AUC: 0.9591
+* F1 Score: 0.9141
+* Precision: 0.9483
+* Recall: 0.8824
 * SHAP analysis confirms interpretability
 
 ---
@@ -83,14 +84,26 @@ The target variable is `Diagnosis`, a binary classification label.
 
 ## 🖥️ How to Use
 
-1. Clone the repo and install dependencies
-2. Run the app:
+1. Clone the repo:
+
+   ```bash
+   git clone https://github.com/kedar2109/liver-disease-prediction
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Run the app:
 
    ```bash
    uvicorn app:app --reload
    ```
-3. Visit `http://127.0.0.1:8000` to access the form
-4. Fill patient data and submit to get real-time prediction
+
+4. Visit `http://127.0.0.1:8000` to access the form
+5. Fill patient data and submit to get real-time prediction
 
 ---
 
@@ -117,7 +130,7 @@ The target variable is `Diagnosis`, a binary classification label.
 │   ├── style.css       # Stylesheet
 │   └── script.js       # Form logic
 ├── README.md           # Documentation
+├── requirements.txt    # Requrements 
 ```
 
 ---
-
