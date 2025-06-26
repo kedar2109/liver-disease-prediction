@@ -1,4 +1,4 @@
-# Liver Disease Prediction Web App
+# Liver Disease Prediction
 
 A full-stack machine learning project that predicts the likelihood of liver disease based on clinical and lifestyle inputs. This solution combines data preprocessing, model training using XGBoost, interpretability with SHAP, and deployment via FastAPI with a custom frontend.
 
